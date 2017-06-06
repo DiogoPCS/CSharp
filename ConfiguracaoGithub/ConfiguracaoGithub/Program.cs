@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Globalization;
 namespace ConfiguracaoGithub
 {
     class Program
@@ -14,7 +14,11 @@ namespace ConfiguracaoGithub
 
         static void Main(string[] args)
         {
-            Console.Write("Hello World");
+            double antigoSalario;
+            Console.WriteLine("Hello World");
+            Console.Write("Digite o Salário");
+            antigoSalario = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            Console.Write("O antigo salário é: " + antigoSalario.ToString("F2", CultureInfo.InvariantCulture));
 
 
         }
